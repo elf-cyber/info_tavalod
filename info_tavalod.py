@@ -54,7 +54,9 @@ c = input(colorama.Fore.RED+'enter the day : ')
 
 a = requests.get('https://meysam72.tk/api/tavalod.php?year='+a+'&month='+b+'&day='+c)
 
-a.text
-print(colorama.Fore.CYAN+'{"created by :@e_l_f_6_6_6"'+a.text +'''
+a.json()
+print(colorama.Fore.CYAN+'{ "craeted by : @e_l_f_6_6_6"'+json.dumps(a.json(), indent=4, separators=(" , ", " ==> :  ")))
+print('''
       
-      "channel_telegram: @elf_security_cyber"      }''')
+      
+         my channel : @elf-security_cyber       }   ''')
